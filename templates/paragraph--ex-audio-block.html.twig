@@ -1,0 +1,101 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% set audio_link = content.field_ex_audio_link[0]['#url'] %}
+{% set audio_record = content.field_ex_audio_lda_record[0]['#url'] %}
+{% set audio_id = paragraph.id() %}
+
+{% set performers = content.field_exhibit_audio_performer %}
+{% set recorded_by = content.field_ex_audio_additional_notes %}
+
+{% block paragraph %}
+<div{{ attributes.addClass(classes) }}>
+    <div class="audio-exhibit">
+        {% block content %}
+        <h3>{{ content.field_ex_audio_file_title }}</h3>
+        <div class="audio-credits">
+        <i>{{ performers }}</i>
+        {% if recorded_by|render|striptags|trim %}
+        {{ recorded_by }}
+        {% endif %}
+        </div>
+        {% if content.field_ex_audio_link|render|striptags|trim %}
+        <audio id="sound{{ audio_id }}" data-src="{{ audio_link }}" type="audio/mp3" /></audio>
+        <div class="play play-button" id="{{ audio_id }}" oncontextmenu="return false;">&nbsp;</div>
+        {% endif %}
+        <div class="audio-links">
+        {% if content.field_ex_audio_lyric|render|striptags|trim %}
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-exhibit" data-toggle="modal" data-target="#lyrics{{ audio_id }}">Lyrics</button> &nbsp;* * * &nbsp;
+
+        <!-- Modal -->
+        <div id="lyrics{{ audio_id }}" class="modal fade modal-exhibit">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body audio-exhibit">
+                        {{ content.field_ex_audio_lyric }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+        
+        {% if content.field_ex_audio_lda_record|render|striptags|trim %}
+        {{ content.field_ex_audio_lda_record }}
+        {% endif %}
+        {% endblock %}
+    </div>
+    </div>
+    </div>
+    {% endblock paragraph %}

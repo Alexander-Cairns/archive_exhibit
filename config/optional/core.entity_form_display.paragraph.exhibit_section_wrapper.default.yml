@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.exhibit_section_wrapper.field_section_id
+    - paragraphs.paragraphs_type.exhibit_section_wrapper
+id: paragraph.exhibit_section_wrapper.default
+targetEntityType: paragraph
+bundle: exhibit_section_wrapper
+mode: default
+content:
+  field_section_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

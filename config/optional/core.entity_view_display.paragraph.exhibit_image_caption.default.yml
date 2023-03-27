@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.exhibit_image_caption.field_exhibit_image
+    - field.field.paragraph.exhibit_image_caption.field_exhibit_image_caption
+    - paragraphs.paragraphs_type.exhibit_image_caption
+  module:
+    - image
+    - text
+id: paragraph.exhibit_image_caption.default
+targetEntityType: paragraph
+bundle: exhibit_image_caption
+mode: default
+content:
+  field_exhibit_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_exhibit_image_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

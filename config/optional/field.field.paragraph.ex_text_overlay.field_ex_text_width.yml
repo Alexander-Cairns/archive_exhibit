@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ex_text_width
+    - paragraphs.paragraphs_type.ex_text_overlay
+  module:
+    - options
+id: paragraph.ex_text_overlay.field_ex_text_width
+field_name: field_ex_text_width
+entity_type: paragraph
+bundle: ex_text_overlay
+label: 'Text width'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: full
+default_value_callback: ''
+settings: {  }
+field_type: list_string

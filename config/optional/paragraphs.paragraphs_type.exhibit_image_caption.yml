@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: exhibit_image_caption
+label: 'Exhibit image caption'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

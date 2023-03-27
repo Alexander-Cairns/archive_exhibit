@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.exhibit.field_exhibit_description
+    - field.field.node.exhibit.field_exhibit_wrapper
+    - node.type.exhibit
+  module:
+    - text
+    - user
+id: node.exhibit.teaser
+targetEntityType: node
+bundle: exhibit
+mode: teaser
+content:
+  field_exhibit_description:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_exhibit_wrapper: true

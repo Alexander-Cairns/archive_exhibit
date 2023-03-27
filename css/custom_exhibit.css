@@ -1,0 +1,47 @@
+/** Custom  Exhibit Styling ** /
+
+/** Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Berkshire+Swash&family=Fascinate&family=Gravitas+One&family=Open+Sans&display=swap');
+
+
+/** Cailidh  Exhibit Styling ** /
+/** Title Block **/
+
+.exhibit-cailidh .exhibit-page h2 {
+    font-family: "Berkshire Swash";
+}
+
+.exhibit-cailidh {
+    font-family: "merriweather";
+    color: #555555
+    
+}
+.exhibit-cailidh p {
+    text-align: justify;
+}
+
+.exhibit-cailidh blockquote {
+    padding: 0px 20px;
+    margin: 0 0 30px;
+    font-size: 1em;
+    border-left: 5px none #eeeeee;
+}
+
+.exhibit-cailidh .audio-exhibit h3 {
+    font-size: 20px;
+    color: #a59283;
+    font-family: monospace;
+}
+
+.exhibit-cailidh .text-title-card h1 {
+    font-family: 'gravitas one';
+    width: 80%;
+    font-size: 5em;
+}
+.exhibit-cailidh .lede {
+    font-weight: 200;
+    color: inherit; 
+    font-family: 'Berkshire Swash';
+    font-size: 1.4em;
+}
+

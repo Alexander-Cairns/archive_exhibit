@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.exhibit_section_wrapper.field_section_id
+    - paragraphs.paragraphs_type.exhibit_section_wrapper
+id: paragraph.exhibit_section_wrapper.default
+targetEntityType: paragraph
+bundle: exhibit_section_wrapper
+mode: default
+content:
+  bp_background:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_section_id:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

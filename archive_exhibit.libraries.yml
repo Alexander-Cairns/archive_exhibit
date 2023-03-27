@@ -1,0 +1,16 @@
+archive_exhibit:
+  version: 1.x
+  header: true
+  css:
+    component:
+      css/archive_exhibit.css: {}
+      css/customlayout.css: {}
+      https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&display=swap: { type: external, minified: true }
+      css/custom_exhibit.css: {}
+  js:
+    js/archive_exhibit.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+

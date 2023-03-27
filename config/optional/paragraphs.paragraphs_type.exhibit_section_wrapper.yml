@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: exhibit_section_wrapper
+label: 'Exhibit Section wrapper'
+icon_uuid: null
+icon_default: null
+description: 'Each section ("Page") of the exhibit is contained in this wrapper.'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      two_col_right: 'Two Column 40/60'
+      two_col_left: 'Two Column 60/40'
+      layout_onecol: 'One column'
+      layout_twocol: 'Two column'
+      layout_twocol_bricks: 'Two column bricks'
+      layout_threecol_25_50_25: 'Three column 25/50/25'
+      layout_threecol_33_34_33: 'Three column 33/34/33'
+      one_column: 'DGI One column'
+      two_column: 'DGI Two column'

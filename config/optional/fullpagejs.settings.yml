@@ -1,0 +1,74 @@
+drupalContentTypes:
+  exhibit: exhibit
+  article: 0
+  page: 0
+  test_exhibit: 0
+licenseKey: 'null'
+fullPageSelector: '#fp-main'
+sectionSelector: .section
+slideSelector: .slide
+controlArrows: 1
+verticalCentered: 1
+scrollingSpeed: '1000'
+sectionsColor: ''
+anchors: ''
+lockAnchors: 0
+easing: easeInOutCubic
+easingcss3: ease
+loopTop: 0
+loopBottom: 0
+loopHorizontal: 0
+css3: 1
+autoScrolling: 1
+fitToSection: 1
+fitToSectionDelay: '3000'
+scrollBar: 0
+paddingTop: ''
+paddingBottom: ''
+fixedElements: ''
+normalScrollElements: '.modal-open, .modal'
+bigSectionsDestination: 'null'
+keyboardScrolling: 0
+touchSensitivity: '10'
+continuousVertical: 0
+animateAnchor: 0
+recordHistory: 0
+menu: ''
+navigation: 1
+navigationPosition: right
+navigationTooltips: ''
+showActiveTooltip: 0
+slidesNavigation: 0
+slidesNavPosition: bottom
+lazyLoading: 1
+cards: 'true'
+cardsKey: ''
+cardsPerspective: ''
+cardsFadeContent: 0
+cardsFadeBackground: 0
+parallax: 1
+parallaxKey: ''
+parallaxType: reveal
+parallaxPercentage: '63'
+parallaxProperty: translate
+scrollOverflow: 1
+scrollOverflowReset: 1
+scrollOverflowResetKey: ''
+dragAndMove: 'true'
+dragAndMoveKey: ''
+offsetSections: 0
+offsetSectionsKey: ''
+fadingEffect: 'true'
+fadingEffectKey: ''
+responsiveWidth: ''
+responsiveHeight: ''
+responsiveSlides: 0
+responsiveSlidesKey: ''
+continuousHorizontal: 0
+continuousHorizontalKey: null
+interlockedSlides: ''
+interlockedSlidesKey: ''
+scrollHorizontally: 0
+scrollHorizontallyKey: ''
+resetSliders: 0
+resetSlidersKey: ''

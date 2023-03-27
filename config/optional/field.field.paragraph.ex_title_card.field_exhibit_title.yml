@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_exhibit_title
+    - paragraphs.paragraphs_type.ex_title_card
+  module:
+    - text
+id: paragraph.ex_title_card.field_exhibit_title
+field_name: field_exhibit_title
+entity_type: paragraph
+bundle: ex_title_card
+label: 'Exhibit Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ex_audio_block.field_ex_audio_additional_notes
+    - field.field.paragraph.ex_audio_block.field_ex_audio_file_title
+    - field.field.paragraph.ex_audio_block.field_ex_audio_lda_record
+    - field.field.paragraph.ex_audio_block.field_ex_audio_link
+    - field.field.paragraph.ex_audio_block.field_ex_audio_lyric
+    - field.field.paragraph.ex_audio_block.field_exhibit_audio_performer
+    - paragraphs.paragraphs_type.ex_audio_block
+  module:
+    - link
+    - text
+id: paragraph.ex_audio_block.default
+targetEntityType: paragraph
+bundle: ex_audio_block
+mode: default
+content:
+  field_ex_audio_additional_notes:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_ex_audio_file_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_ex_audio_lda_record:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ex_audio_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ex_audio_lyric:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_exhibit_audio_performer:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

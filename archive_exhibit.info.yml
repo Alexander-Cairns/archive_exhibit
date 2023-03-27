@@ -1,0 +1,13 @@
+name: 'Archive Exhibit'
+type: module
+description: 'Creates a custom Exhibit type for the LDA'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Custom
+dependencies:
+  - bootstrap_paragraphs
+  - paragraphs
+  - menu_ui
+  - layout_paragraphs
+  
+

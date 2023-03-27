@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: ex_footer_section
+label: 'Exhibit Footer Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

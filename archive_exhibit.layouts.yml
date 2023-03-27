@@ -1,0 +1,48 @@
+two_col_left:
+  label: 'Two Column 60/40'
+  category: 'Archive Section'
+  template: templates/layouts/layout--two-col-left
+  library: archive_exhibit/archive_exhibit
+  regions:
+   first:
+       label: First
+   second:
+       label: Second
+  icon_map:
+    - [first, second]
+two_col_right:
+  label: 'Two Column 40/60'
+  category: 'Archive Section'
+  template: templates/layouts/layout--two-col-right
+  library: archive_exhibit/archive_exhibit
+  regions:
+   first:
+       label: First
+   second:
+       label: Second
+  icon_map:
+    - [first, second]
+two_col_slide:
+  label: 'Two Column Slide'
+  category: 'Archive Section'
+  template: templates/layouts/layout--two-col-slide
+  library: archive_exhibit/archive_exhibit
+  regions:
+   first:
+       label: First
+   second:
+       label: Second
+  icon_map:
+    - [first, second]
+two_col_slide-left:
+  label: 'Two Column Slide 60/40'
+  category: 'Archive Section'
+  template: templates/layouts/layout--two-col-slide-left
+  library: archive_exhibit/archive_exhibit
+  regions:
+   first:
+       label: First
+   second:
+       label: Second
+  icon_map:
+    - [first, second]

@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'layout',
+   'layout--two-col-right',
+  ]
+%}
+
+{% if content %}
+<div{{ attributes.addClass(classes) }}>
+    {% if content.first %}
+        <div {{ region_attributes.first.addClass('two-col-small') }}>
+            {{ content.first }}
+        </div>
+    {% endif %}
+    {% if content.second %}
+        <div {{ region_attributes.second.addClass('two-col-large') }}>
+            {{ content.second }}
+        </div>
+    {% endif %}
+</div>
+{% endif %}

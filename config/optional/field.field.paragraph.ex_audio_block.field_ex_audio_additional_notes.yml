@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ex_audio_additional_notes
+    - paragraphs.paragraphs_type.ex_audio_block
+  module:
+    - text
+id: paragraph.ex_audio_block.field_ex_audio_additional_notes
+field_name: field_ex_audio_additional_notes
+entity_type: paragraph
+bundle: ex_audio_block
+label: 'Additional notes'
+description: 'Add recorded by, etc here'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

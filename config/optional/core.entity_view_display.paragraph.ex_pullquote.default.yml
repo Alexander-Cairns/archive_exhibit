@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ex_pullquote.field_pullquote_body
+    - field.field.paragraph.ex_pullquote.field_source
+    - paragraphs.paragraphs_type.ex_pullquote
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.ex_pullquote.default
+targetEntityType: paragraph
+bundle: ex_pullquote
+mode: default
+content:
+  field_pullquote_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_source:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

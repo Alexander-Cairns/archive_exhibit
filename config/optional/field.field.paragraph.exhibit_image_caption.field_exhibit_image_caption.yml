@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_exhibit_image_caption
+    - paragraphs.paragraphs_type.exhibit_image_caption
+  module:
+    - text
+id: paragraph.exhibit_image_caption.field_exhibit_image_caption
+field_name: field_exhibit_image_caption
+entity_type: paragraph
+bundle: exhibit_image_caption
+label: 'Exhibit image caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

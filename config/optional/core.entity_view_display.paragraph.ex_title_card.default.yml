@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ex_title_card.field_ex_title_background_image
+    - field.field.paragraph.ex_title_card.field_exhibit_subtitle
+    - field.field.paragraph.ex_title_card.field_exhibit_title
+    - paragraphs.paragraphs_type.ex_title_card
+  module:
+    - image
+    - text
+id: paragraph.ex_title_card.default
+targetEntityType: paragraph
+bundle: ex_title_card
+mode: default
+content:
+  field_ex_title_background_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_exhibit_subtitle:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_exhibit_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

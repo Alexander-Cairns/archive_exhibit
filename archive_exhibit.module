@@ -1,0 +1,114 @@
+<?php
+
+/**
+ * @file
+ * Contains archive_exhibit.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function archive_exhibit_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the archive_exhibit module.
+    case 'help.page.archive_exhibit':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A custom module for ACE Exhibits') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+
+
+
+
+function archive_exhibit_preprocess(&$variables, $hook) {
+    $variables['base_path'] = base_path();
+}
+
+
+/**
+* Implements hook_page_attachments
+*/
+
+function archive_exhibit_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'archive_exhibit/archive_exhibit';
+}
+
+
+
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function archive_exhibit_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  // explode args.
+  $path_args = explode('/', $current_path);
+  if (($node = \Drupal::request()->attributes->get('node')) && isset($path_args[3]) && ($path_args[3] == 'edit' || $path_args[3] == 'delete')) {
+    array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function archive_exhibit_theme($existing, $type, $theme, $path) {
+    return [
+    'page__exhibit' => [
+      'template' => 'page--exhibit',
+        'base hook' => 'page',
+    ],
+    'node__exhibit' => [
+      'template' => 'node--exhibit',
+        'base hook' => 'node',
+    ],
+    'paragraph__exhibit_section_wrapper' => [
+      'template' => 'paragraph--exhibit-section-wrapper',
+        'base hook' => 'paragraph',
+    ],
+    'paragraph__slide_section' => [
+      'template' => 'paragraph--slide-section',
+        'base hook' => 'paragraph',
+    ],
+    'paragraph__ex_audio_block' => [
+      'template' => 'paragraph--ex-audio-block',
+        'base hook' => 'paragraph',
+    ],
+    'field__field_exhibit_wrapper' => [
+      'template' => 'field--field-exhibit-wrapper',
+        'base hook' => 'field',
+    ],
+    'field__field_exhibit_audio_performer' => [
+      'template' => 'field--field-exhibit-audio-performer',
+        'base hook' => 'field',
+    ],
+    'paragraph__ex_title_card' => [
+      'template' => 'paragraph--ex-title-card',
+        'base hook' => 'paragraph',
+    ],
+    'paragraph__exhibit_image_caption' => [
+      'template' => 'paragraph--exhibit-image-caption',
+        'base hook' => 'paragraph',
+    ],
+    'paragraph__ex_footer_section' => [
+      'template' => 'paragraph--ex-footer-section',
+        'base hook' => 'paragraph',
+    ],
+    'paragraph__ex_text_overlay' => [
+      'template' => 'paragraph--ex-text-overlay',
+        'base hook' => 'paragraph',
+    ],
+
+  ];
+
+}
+
+

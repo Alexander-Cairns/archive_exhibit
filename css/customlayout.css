@@ -1,0 +1,70 @@
+.layout--two-col-left,
+.layout--two-col-right,
+.layout-twocol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+
+
+.layout--twocol,
+.layout--two-col-left,
+.layout--two-col-right > .layout {
+    flex: 0 1 100%;
+    padding: 2rem 5rem;
+    text-align: justify;
+}
+
+
+.layout--two-col-slide {
+    padding: 2rem 6rem;
+    text-align: justify;
+}
+
+@media screen and (min-width:40em) {
+
+    .layout--two-col-left .two-col-large {
+        flex: 0 1 60%;
+        padding: 20px;
+    }
+
+    .layout--two-col-right .two-col-large {
+        flex: 0 1 60%;
+        padding: 20px;
+    }
+
+    .layout--two-col-left .two-col-small {
+        flex: 0 1 40%;
+        padding: 20px;
+    }
+
+    .layout--two-col-right .two-col-small {
+        flex: 0 1 40%;
+        padding: 20px;
+    }
+
+    .layout--twocol > .layout__region--first,
+    .layout--twocol > .layout__region--second {
+        flex: 0 1 50%;
+        padding: 1rem 2rem;
+    }
+
+    .col-slide-right,
+    .col-slide-left {
+        width: 50%;
+        float: left;
+        padding: 1rem 1rem;
+    }
+
+    .col-slide-larger {
+        width: 60%;
+        float: left;
+        padding: 1rem 1rem;
+    }
+
+    .col-slide-smaller {
+        width: 40%;
+        float: left;
+        padding: 1rem 1rem;
+    }
+}

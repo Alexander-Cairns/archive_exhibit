@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.exhibit.field_exhibit_description
+    - field.field.node.exhibit.field_exhibit_wrapper
+    - node.type.exhibit
+  module:
+    - layout_paragraphs
+    - user
+id: node.exhibit.default
+targetEntityType: node
+bundle: exhibit
+mode: default
+content:
+  field_exhibit_wrapper:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: layout_paragraphs
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_exhibit_description: true

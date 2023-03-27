@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ex_audio_block.field_ex_audio_additional_notes
+    - field.field.paragraph.ex_audio_block.field_ex_audio_file_title
+    - field.field.paragraph.ex_audio_block.field_ex_audio_lda_record
+    - field.field.paragraph.ex_audio_block.field_ex_audio_link
+    - field.field.paragraph.ex_audio_block.field_ex_audio_lyric
+    - field.field.paragraph.ex_audio_block.field_exhibit_audio_performer
+    - paragraphs.paragraphs_type.ex_audio_block
+  module:
+    - link
+    - text
+id: paragraph.ex_audio_block.default
+targetEntityType: paragraph
+bundle: ex_audio_block
+mode: default
+content:
+  field_ex_audio_additional_notes:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ex_audio_file_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ex_audio_lda_record:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ex_audio_link:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_ex_audio_lyric:
+    weight: 4
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_exhibit_audio_performer:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

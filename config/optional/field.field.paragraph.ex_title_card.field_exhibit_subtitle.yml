@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_exhibit_subtitle
+    - paragraphs.paragraphs_type.ex_title_card
+  module:
+    - text
+id: paragraph.ex_title_card.field_exhibit_subtitle
+field_name: field_exhibit_subtitle
+entity_type: paragraph
+bundle: ex_title_card
+label: 'Exhibit Subtitle'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'presented by the Lomax Digital Archive'
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

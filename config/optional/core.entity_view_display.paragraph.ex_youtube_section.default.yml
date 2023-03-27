@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ex_youtube_section.field_yt_media
+    - paragraphs.paragraphs_type.ex_youtube_section
+id: paragraph.ex_youtube_section.default
+targetEntityType: paragraph
+bundle: ex_youtube_section
+mode: default
+content:
+  field_yt_media:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

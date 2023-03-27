@@ -1,0 +1,21 @@
+{%
+  set classes = [
+   'layout',
+   'layout--two-col-slide',
+  ]
+%}
+     
+{% if content %}
+<div{{ attributes.addClass(classes) }}>
+    {% if content.first %}
+        <div {{ region_attributes.first.addClass('col-slide-larger') }}>
+            {{ content.first }}
+        </div>
+    {% endif %}
+    {% if content.second %}
+        <div {{ region_attributes.second.addClass('col-slide-smaller') }}>
+            {{ content.second }}
+        </div>
+    {% endif %}
+</div>
+{% endif %}
