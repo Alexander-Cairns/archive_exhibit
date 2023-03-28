@@ -1,0 +1,11 @@
+{
+    "name": "lomaxarchive/archive_exhibit",
+    "description": "",
+    "homepage": "https://github.com/lomaxarchive/archive_exhibit",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "require": {
+    },
+    "require-dev": {
+    }
+}
